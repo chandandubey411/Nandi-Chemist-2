@@ -1,20 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiShoppingCart, FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
-import { useSelector } from 'react-redux';
-import { selectCartCount } from '../../redux/slices/cartSlice';
-import { useCartUI } from '../../context/CartContext';
-import SearchBar from '../ui/SearchBar';
-import { categories } from '../../data/categories';
+import { FiMenu, FiX, FiPhone } from 'react-icons/fi';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [catOpen, setCatOpen] = useState(false);
-  const cartCount = useSelector(selectCartCount);
-  const { openCart } = useCartUI();
-  const navigate = useNavigate();
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 30);
@@ -24,15 +15,14 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Shop', path: '/shop' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ];
 
   return (
     <>
-      <motion.nav initial={{ y: -100 }} animate={{ y: 0 }} className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'glass shadow-glass py-2' : 'bg-white/90 backdrop-blur-md py-3'}`}>
-        <div className="container-max flex items-center justify-between gap-4">
+      <motion.nav initial={{ y: -100 }} animate={{ y: 0 }} className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-white/95 backdrop-blur-md py-3'}`}>
+        <div className="container-max flex items-center justify-between gap-4 px-4">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 shrink-0">
             <img src="/logo.svg" alt="Nandi Chemists Logo" className="h-10 w-auto object-contain" />
@@ -42,53 +32,30 @@ const Navbar = () => {
             </div>
           </Link>
 
-          {/* Search */}
-          <div className="hidden md:block flex-1 max-w-xl">
-            <SearchBar />
-          </div>
-
-          {/* Nav Links - Desktop */}
-          <div className="hidden lg:flex items-center gap-6">
+          {/* Desktop Nav Links */}
+          <div className="hidden lg:flex items-center gap-8">
             {navLinks.map(link => (
-              <Link key={link.path} to={link.path} className="nav-link">{link.name}</Link>
+              <Link key={link.path} to={link.path} className="text-gray-600 hover:text-primary-600 font-medium text-sm transition-colors">{link.name}</Link>
             ))}
-            <div className="relative" onMouseEnter={() => setCatOpen(true)} onMouseLeave={() => setCatOpen(false)}>
-              <button className="nav-link flex items-center gap-1">Categories <FiChevronDown size={14} /></button>
-              <AnimatePresence>
-                {catOpen && (
-                  <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full right-0 mt-2 bg-white rounded-2xl shadow-lg border border-gray-100 py-2 w-52 z-50">
-                    {categories.map(cat => (
-                      <button key={cat.id} onClick={() => { navigate(`/shop?category=${cat.name}`); setCatOpen(false); }}
-                        className="w-full text-left px-4 py-2.5 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-600 flex items-center gap-2 transition-colors">
-                        <span>{cat.icon}</span>{cat.name}
-                      </button>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
           </div>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-2">
-            <button onClick={openCart} className="relative p-2.5 rounded-xl hover:bg-primary-50 transition-colors group">
-              <FiShoppingCart size={20} className="text-gray-600 group-hover:text-primary-600" />
-              {cartCount > 0 && (
-                <motion.span initial={{ scale: 0 }} animate={{ scale: 1 }} className="absolute -top-1 -right-1 bg-gradient-to-r from-primary-500 to-cyan-500 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full">
-                  {cartCount}
-                </motion.span>
-              )}
-            </button>
+          <div className="flex items-center gap-3">
+            <a
+              href="https://wa.me/918586850840?text=Hello%2C%20I%20want%20to%20order%20medicines"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-xl transition-colors"
+            >
+              Order on WhatsApp
+            </a>
+            <a href="tel:+918586850840" className="hidden md:flex items-center gap-1.5 text-primary-600 font-semibold text-sm hover:text-primary-800 transition-colors">
+              <FiPhone size={15} /> 8586850840
+            </a>
             <button onClick={() => setMenuOpen(true)} className="lg:hidden p-2.5 rounded-xl hover:bg-primary-50">
               <FiMenu size={20} className="text-gray-600" />
             </button>
           </div>
-        </div>
-
-        {/* Mobile Search */}
-        <div className="md:hidden px-4 pb-2 pt-1">
-          <SearchBar />
         </div>
       </motion.nav>
 
@@ -97,9 +64,9 @@ const Navbar = () => {
         {menuOpen && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[60] bg-black/40" onClick={() => setMenuOpen(false)}>
             <motion.div initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} transition={{ type: 'tween', duration: 0.3 }}
-              className="absolute right-0 top-0 bottom-0 w-72 bg-white shadow-2xl" onClick={(e) => e.stopPropagation()}>
+              className="absolute right-0 top-0 bottom-0 w-72 bg-white shadow-2xl" onClick={e => e.stopPropagation()}>
               <div className="flex items-center justify-between p-4 border-b">
-                <span className="font-outfit font-bold text-lg">Menu</span>
+                <span className="font-outfit font-bold text-lg text-primary-700">Menu</span>
                 <button onClick={() => setMenuOpen(false)} className="p-2 rounded-lg hover:bg-gray-100"><FiX size={20} /></button>
               </div>
               <div className="p-4 space-y-1">
@@ -109,14 +76,14 @@ const Navbar = () => {
                     {link.name}
                   </Link>
                 ))}
-                <div className="pt-3 border-t mt-3">
-                  <p className="text-xs text-gray-400 px-4 mb-2">Categories</p>
-                  {categories.map(cat => (
-                    <button key={cat.id} onClick={() => { navigate(`/shop?category=${cat.name}`); setMenuOpen(false); }}
-                      className="w-full text-left px-4 py-2.5 rounded-xl text-sm text-gray-600 hover:bg-primary-50 flex items-center gap-2">
-                      <span>{cat.icon}</span>{cat.name}
-                    </button>
-                  ))}
+                <div className="pt-4 mt-2 border-t space-y-3">
+                  <a href="https://wa.me/918586850840?text=Hello%2C%20I%20want%20to%20order%20medicines" target="_blank" rel="noopener noreferrer"
+                    className="block w-full text-center bg-green-500 text-white font-semibold py-2.5 rounded-xl text-sm">
+                    Order on WhatsApp
+                  </a>
+                  <a href="tel:+918586850840" className="block w-full text-center bg-primary-50 text-primary-700 font-semibold py-2.5 rounded-xl text-sm">
+                    Call: 8586850840
+                  </a>
                 </div>
               </div>
             </motion.div>

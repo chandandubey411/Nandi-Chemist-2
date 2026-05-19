@@ -53,13 +53,15 @@ const HeroSection = () => {
             {/* CTA Buttons */}
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}
               className="flex flex-wrap gap-4">
-              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => navigate('/shop')}
+              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
+                onClick={() => window.open('https://wa.me/918586850840?text=Hello%2C%20I%20want%20to%20order%20medicines', '_blank')}
                 className="btn-primary flex items-center gap-2 text-base">
-                Check More <FiArrowRight />
+                Order on WhatsApp <FiArrowRight />
               </motion.button>
-              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => navigate('/shop')}
+              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
+                onClick={() => document.getElementById('query-form')?.scrollIntoView({ behavior: 'smooth' })}
                 className="btn-secondary text-base">
-                Find Medicine
+                Send a Query
               </motion.button>
             </motion.div>
 
