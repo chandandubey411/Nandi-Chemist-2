@@ -1,0 +1,17 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Navy Blue Cross Base -->
+  <path d="M104 24 H152 V232 H104 Z" fill="#00477b"/>
+  <path d="M24 104 H152 V152 H24 Z" fill="#00477b"/>
+  
+  <!-- Orange Cross Right Arm -->
+  <path d="M152 104 H232 V152 H152 Z" fill="#e87019"/>
+  <!-- Slight curve on the orange arm to match the original -->
+  <path d="M152 104 Q 140 128 152 152" fill="#e87019"/>
+  <path d="M152 104 Q 140 128 152 152 Z" fill="white"/>
+
+  <!-- White Negative Space (Head) -->
+  <circle cx="128" cy="96" r="22" fill="white"/>
+  
+  <!-- White Negative Space (Swooping Arms/Body) -->
+  <path d="M24 120 Q 80 120 128 144 Q 144 130 154 104 L 170 104 Q 154 150 128 164 Q 80 140 24 134 Z" fill="white"/>
+</svg>

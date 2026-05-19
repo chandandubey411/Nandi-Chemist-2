@@ -1,3 +1,333 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #0F172A;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #0ea5e9;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0284c7;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .glass-dark {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-blue {
+    background: rgba(14, 165, 233, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(14, 165, 233, 0.2);
+  }
+
+  .card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(14, 165, 233, 0.2);
+  }
+
+  .btn-primary {
+    background: linear-gradient(to right, #0ea5e9, #06b6d4);
+    color: white;
+    font-weight: 600;
+    border-radius: 1rem;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.5);
+    transform: scale(1.05);
+  }
+
+  .btn-primary:active {
+    transform: scale(0.95);
+  }
+
+  .btn-secondary {
+    background: white;
+    color: #0284c7;
+    font-weight: 600;
+    border-radius: 1rem;
+    border: 2px solid #bae6fd;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    background: #f0f9ff;
+    border-color: #38bdf8;
+  }
+
+  .btn-secondary:active {
+    transform: scale(0.95);
+  }
+
+  .btn-outline {
+    border: 2px solid white;
+    color: white;
+    font-weight: 600;
+    border-radius: 1rem;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline:hover {
+    background: white;
+    color: #0284c7;
+  }
+
+  .btn-outline:active {
+    transform: scale(0.95);
+  }
+
+  .section-padding {
+    padding: 4rem 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .section-padding {
+      padding: 4rem 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding: 4rem 2rem;
+    }
+  }
+
+  .container-max {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
+  .gradient-text {
+    background: linear-gradient(to right, #0284c7, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .badge-discount {
+    background: #ef4444;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .badge-new {
+    background: #22c55e;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .badge-hot {
+    background: #f97316;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .product-card {
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.1);
+    border: 1px solid #f3f4f6;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(14, 165, 233, 0.2);
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    outline: none;
+    transition: all 0.2s ease;
+    background: white;
+  }
+
+  .input-field:focus {
+    ring: 2px;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.4);
+    border-color: transparent;
+  }
+
+  .nav-link {
+    color: #4b5563;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: color 0.2s ease;
+  }
+
+  .nav-link:hover {
+    color: #0284c7;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 4s ease infinite;
+  }
+}
+
+/* Swiper custom styles */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #0ea5e9 !important;
+  background: white;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 14px !important;
+  font-weight: bold;
+}
+
+.swiper-pagination-bullet-active {
+  background: #0ea5e9 !important;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+/* Custom animations */
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(14,165,233,0.4); }
+  50% { box-shadow: 0 0 40px rgba(6,182,212,0.8); }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Three.js canvas */
+.three-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(90deg, #f0f4f8 25%, #e8edf2 50%, #f0f4f8 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: 8px;
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Cart drawer */
+.cart-drawer {
+  animation: slideInRight 0.3s ease-out;
+}
+
+/* Prescription upload */
+.upload-area {
+  border: 2px dashed #0ea5e9;
+  transition: all 0.3s ease;
+}
+
+.upload-area:hover,
+.upload-area.drag-over {
+  border-color: #06b6d4;
+  background: rgba(14, 165, 233, 0.05);
+}
+
+/* Chat assistant */
+.chat-bubble {
+  animation: fadeInUp 0.3s ease-out;
+}
