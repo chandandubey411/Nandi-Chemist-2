@@ -21,8 +21,16 @@ const Navbar = () => {
 
   return (
     <>
-      <motion.nav initial={{ y: -100 }} animate={{ y: 0 }} className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-white/95 backdrop-blur-md py-3'}`}>
-        <div className="container-max flex items-center justify-between gap-4 px-4">
+      <motion.nav initial={{ y: -100 }} animate={{ y: 0 }} className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white/95 backdrop-blur-md'}`}>
+        {/* Top Announcement Bar */}
+        <div className="bg-gradient-to-r from-primary-600 to-cyan-600 text-white text-[10px] sm:text-xs py-1.5 px-4 text-center font-outfit font-bold tracking-wide flex items-center justify-center gap-2">
+          <span className="animate-pulse">🚚</span>
+          <span>FREE HOME DELIVERY WITHIN 3KM (Min. Order ₹300)</span>
+          <span className="hidden sm:inline text-white/30">|</span>
+          <span className="hidden sm:inline text-[10px] opacity-90 uppercase font-medium">15 Min Express Delivery in Sector-75</span>
+        </div>
+
+        <div className={`container-max flex items-center justify-between gap-4 px-4 transition-all duration-300 ${scrolled ? 'py-2' : 'py-3'}`}>
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 shrink-0">
             <img src="/logo.svg" alt="Nandi Chemists Logo" className="h-10 w-auto object-contain" />

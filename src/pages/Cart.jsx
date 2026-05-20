@@ -54,14 +54,14 @@ const Cart = () => {
               <div className="flex justify-between text-gray-500"><span>Delivery</span><span>{deliveryFee === 0 ? <span className="text-green-600">FREE</span> : `₹${deliveryFee}`}</span></div>
               <div className="flex justify-between font-bold text-dark text-lg pt-3 border-t"><span>Total</span><span>₹{total.toFixed(2)}</span></div>
             </div>
-            {subtotal >= 200 ? (
+            {subtotal >= 300 ? (
               <Link to="/checkout" className="block w-full btn-primary text-center mt-4">Proceed to Checkout</Link>
             ) : (
               <button disabled className="w-full bg-gray-300 text-gray-500 rounded-2xl py-3 font-semibold cursor-not-allowed mt-4 text-center">
-                Add ₹{(200 - subtotal).toFixed(2)} more to checkout
+                Add ₹{(300 - subtotal).toFixed(2)} more to checkout
               </button>
             )}
-            <p className="text-[10px] text-gray-400 text-center mt-2">3km free home delivery • Minimum order ₹200</p>
+            <p className="text-[10px] text-gray-400 text-center mt-2">3km free home delivery • Minimum order ₹300</p>
           </div>
         </div>
       </div>

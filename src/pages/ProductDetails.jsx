@@ -97,7 +97,7 @@ const ProductDetails = () => {
               </div>
 
               <div className="flex gap-4 mt-6 pt-6 border-t border-gray-100">
-                <div className="flex items-center gap-2 text-xs text-gray-400"><FiTruck className="text-green-500" /> 3km free home delivery • Min order ₹200</div>
+                <div className="flex items-center gap-2 text-xs text-gray-400"><FiTruck className="text-green-500" /> 3km free home delivery • Min order ₹300</div>
                 <div className="flex items-center gap-2 text-xs text-gray-400"><FiShield className="text-blue-500" /> 100% Authentic</div>
               </div>
 

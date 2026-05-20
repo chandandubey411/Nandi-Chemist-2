@@ -26,9 +26,11 @@ const HeroSection = () => {
           {/* Left Content */}
           <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm rounded-full px-4 py-2 mb-6 shadow-sm border border-white/50">
-              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-xs font-medium text-gray-600">15 Min Express Delivery in Sector-75</span>
+              className="inline-flex flex-wrap items-center gap-2 bg-white/85 backdrop-blur-sm rounded-full px-4 py-2 mb-6 shadow-sm border border-white/60">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+              <span className="text-xs font-bold text-primary-700">15 Min Express Delivery in Sector-75</span>
+              <span className="text-gray-300">|</span>
+              <span className="text-xs font-extrabold text-green-600 tracking-wide uppercase">Free Delivery within 3km</span>
             </motion.div>
 
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.7 }}

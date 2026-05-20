@@ -103,7 +103,7 @@ Thank you for ordering from NandiChemist! 💊`;
     </motion.div>
   );
 
-  if (items.length === 0) {
+  if (items.length === 0 || subtotal < 300) {
     navigate('/cart');
     return null;
   }

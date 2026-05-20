@@ -71,12 +71,12 @@ const CartDrawer = () => {
                   <div className="flex justify-between font-bold text-dark text-base pt-2 border-t"><span>Total</span><span>₹{total.toFixed(2)}</span></div>
                 </div>
 
-                <motion.button whileHover={{ scale: subtotal >= 200 ? 1.02 : 1 }} whileTap={{ scale: subtotal >= 200 ? 0.98 : 1 }} onClick={() => { closeCart(); navigate('/checkout'); }}
-                  disabled={subtotal < 200}
-                  className={`w-full text-base ${subtotal >= 200 ? 'btn-primary' : 'bg-gray-300 text-gray-500 rounded-2xl py-3 font-semibold cursor-not-allowed'}`}>
-                  {subtotal < 200 ? `Add ₹${(200 - subtotal).toFixed(2)} more to checkout` : 'Proceed to Checkout'}
+                <motion.button whileHover={{ scale: subtotal >= 300 ? 1.02 : 1 }} whileTap={{ scale: subtotal >= 300 ? 0.98 : 1 }} onClick={() => { closeCart(); navigate('/checkout'); }}
+                  disabled={subtotal < 300}
+                  className={`w-full text-base ${subtotal >= 300 ? 'btn-primary' : 'bg-gray-300 text-gray-500 rounded-2xl py-3 font-semibold cursor-not-allowed'}`}>
+                  {subtotal < 300 ? `Add ₹${(300 - subtotal).toFixed(2)} more to checkout` : 'Proceed to Checkout'}
                 </motion.button>
-                <p className="text-[10px] text-gray-400 text-center">3km free home delivery • Minimum order ₹200</p>
+                <p className="text-[10px] text-gray-400 text-center">3km free home delivery • Minimum order ₹300</p>
               </div>
             )}
           </motion.div>

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import SectionTitle from '../components/common/SectionTitle';
-import { FiShield, FiTruck, FiUsers, FiAward, FiHeart, FiGlobe, FiMapPin } from 'react-icons/fi';
+import { FiShield, FiTruck, FiUsers, FiAward, FiHeart, FiGlobe, FiMapPin, FiPhone, FiExternalLink } from 'react-icons/fi';
 
 const stats = [
   { icon: <FiShield size={28} />, value: '100%', label: 'Authentic Products', color: 'bg-blue-100 text-blue-600' },
@@ -89,17 +89,82 @@ const About = () => {
           <SectionTitle subtitle="Our Locations" title="Visit Us Today" />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              "DASNAC The Jewel Of Noida, Sector-75 Noida-201301",
-              "Shop No. 11 & 20, Plot No - GH - 1 Prateek Laurel, Sector - 120 Gautam Budh Nagar - Noida (U.P), Pin Code - 201301",
-              "Shop No. 11A, Lotus Panache Arcade Sector-110 Gautam Budh Nagar - Noida (U.P), Pin Code - 201301",
-              "Shop No. 107, Gulshan Vivante Sector - 137 Gautam Budh Nagar - Noida (U.P), Pin Code - 201301",
-              "Shop No. 2, Plot No. E-E-16_B_02, First Floor, kirtimaan Plaze Sector-30, Noida (U.P), Pin Code - 201301",
-              "Shop No. 12, Grand Omaxe Opp Panchsheel Balak Inter Collage Sec-93B, Gautam Budh Nagar (U.P) Pin Code - 201304"
+              {
+                name: "Sector-75 (Dasnac Jewel)",
+                tag: "Main Branch",
+                address: "DASNAC The Jewel Of Noida, Sector-75 Noida-201301",
+                image: "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=600&h=400&fit=crop&q=80",
+                phone: "+91 8586850840",
+                mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Dasnac+Jewel+Sector-75+Noida"
+              },
+              {
+                name: "Sector-120 (Prateek Laurel)",
+                tag: "Prateek Laurel Store",
+                address: "Shop No. 11 & 20, Plot No - GH - 1 Prateek Laurel, Sector - 120 Gautam Budh Nagar - Noida (U.P), Pin Code - 201301",
+                image: "/locations/prateek-laurel.jpg",
+                phone: "+91 8586850840",
+                mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Prateek+Laurel+Sector-120+Noida"
+              },
+              {
+                name: "Sector-110 (Lotus Panache)",
+                tag: "Lotus Panache Store",
+                address: "Shop No. 11A, Lotus Panache Arcade Sector-110 Gautam Budh Nagar - Noida (U.P), Pin Code - 201301",
+                image: "/locations/lotus-panache.png",
+                phone: "+91 8586850840",
+                mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Lotus+Panache+Arcade+Sector-110+Noida"
+              },
+              {
+                name: "Sector-137 (Gulshan Vivante)",
+                tag: "Gulshan Vivante Store",
+                address: "Shop No. 107, Gulshan Vivante Sector - 137 Gautam Budh Nagar - Noida (U.P), Pin Code - 201301",
+                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop&q=80",
+                phone: "+91 8586850840",
+                mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Gulshan+Vivante+Sector-137+Noida"
+              },
+              {
+                name: "Sector-30 (Kirtimaan Plaza)",
+                tag: "Kirtimaan Plaza Store",
+                address: "Shop No. 2, Plot No. E-E-16_B_02, First Floor, kirtimaan Plaze Sector-30, Noida (U.P), Pin Code - 201301",
+                image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=400&fit=crop&q=80",
+                phone: "+91 8586850840",
+                mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Kirtimaan+Plaza+Sector-30+Noida"
+              },
+              {
+                name: "Sector-93B (Grand Omaxe)",
+                tag: "Grand Omaxe Store",
+                address: "Shop No. 12, Grand Omaxe Opp Panchsheel Balak Inter Collage Sec-93B, Gautam Budh Nagar (U.P) Pin Code - 201304",
+                image: "https://images.unsplash.com/photo-1607619056574-7b8f304b3c8f?w=600&h=400&fit=crop&q=80",
+                phone: "+91 8586850840",
+                mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Grand+Omaxe+Sector-93B+Noida"
+              }
             ].map((loc, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                className="p-6 rounded-3xl bg-white shadow-card border border-gray-100 flex items-start gap-4 hover:border-primary-200 transition-colors">
-                <div className="mt-1 text-primary-500 shrink-0"><FiMapPin size={24} /></div>
-                <p className="text-sm text-gray-500 leading-relaxed font-medium">{loc}</p>
+                className="relative overflow-hidden group rounded-3xl bg-white shadow-card border border-gray-100 hover:shadow-xl hover:border-primary-200 transition-all duration-300 flex flex-col">
+                <div className="relative aspect-video w-full overflow-hidden bg-gray-100">
+                  <img src={loc.image} alt={loc.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm shadow-sm rounded-full px-3 py-1 text-[10px] font-bold text-primary-700 tracking-wide uppercase border border-white/50">
+                    {loc.tag}
+                  </div>
+                </div>
+                <div className="p-5 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3 className="font-outfit font-bold text-dark text-base mb-2 group-hover:text-primary-600 transition-colors">
+                      {loc.name}
+                    </h3>
+                    <div className="flex items-start gap-2.5 mb-4 text-xs text-gray-400">
+                      <FiMapPin size={16} className="text-primary-500 shrink-0 mt-0.5" />
+                      <p className="leading-relaxed">{loc.address}</p>
+                    </div>
+                  </div>
+                  <div className="border-t border-gray-50 pt-4 flex items-center justify-between gap-3 mt-auto">
+                    <a href={loc.mapUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-xs font-semibold text-primary-600 hover:text-primary-700 transition-colors">
+                      <FiExternalLink size={14} /> Get Directions
+                    </a>
+                    <a href={`tel:${loc.phone.replace(/\s+/g, '')}`} className="flex items-center gap-1.5 text-xs font-semibold text-gray-500 hover:text-dark transition-colors">
+                      <FiPhone size={14} /> Call Store
+                    </a>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>

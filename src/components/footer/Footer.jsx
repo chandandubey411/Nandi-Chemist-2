@@ -42,7 +42,7 @@ const Footer = () => {
                 <span className="font-outfit font-bold text-[16px] text-primary-800 leading-tight tracking-wide">CHEMISTS</span>
               </div>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-4">Trusted Name Experienced People. Since 1954. 15-minute express delivery in Sector-75. 3KM Free Home Delivery on minimum orders of ₹200. We are NOT a MRP shop!</p>
+            <p className="text-gray-400 text-sm leading-relaxed mb-4">Trusted Name Experienced People. Since 1954. 15-minute express delivery in Sector-75. 3KM Free Home Delivery on minimum orders of ₹300. We are NOT a MRP shop!</p>
             <div className="flex gap-2">
               {socials.map((s, i) => (
                 <a key={i} href={s.href} className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-gray-400 hover:bg-primary-500 hover:text-white transition-all duration-300 text-sm">
