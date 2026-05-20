@@ -37,9 +37,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img src="/logo.svg" alt="Nandi Chemists Logo" className="h-10 w-auto object-contain" />
-              <div className="flex flex-col">
-                <span className="font-outfit font-bold text-[16px] text-primary-600 leading-tight tracking-wide">NANDI</span>
-                <span className="font-outfit font-bold text-[16px] text-primary-800 leading-tight tracking-wide">CHEMISTS</span>
+              <div className="flex gap-1.5">
+                <span className="font-outfit font-bold text-[16px] text-red-600 leading-tight tracking-wide">NANDI</span>
+                <span className="font-outfit font-bold text-[16px] text-green-600 leading-tight tracking-wide">CHEMISTS</span>
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">Trusted Name Experienced People. Since 1954. 15-minute express delivery in Sector-75. 3KM Free Home Delivery on minimum orders of ₹300. We are NOT a MRP shop!</p>

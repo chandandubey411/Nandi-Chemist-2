@@ -29,6 +29,8 @@ const companies = [
   { name: 'Dabur', slug: 'dabur', color: '#4caf50', logo: 'https://logo.clearbit.com/dabur.com', fallback: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Dabur_India_logo.svg/300px-Dabur_India_logo.svg.png' },
   { name: 'Bayer India', slug: 'bayer', color: '#10384f', logo: 'https://logo.clearbit.com/bayer.com', fallback: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Bayer_AG_logo.svg/300px-Bayer_AG_logo.svg.png' },
   { name: 'J&J', slug: 'jnj', color: '#c8102e', logo: 'https://logo.clearbit.com/jnj.com', fallback: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Johnson_%26_Johnson_logo.svg/300px-Johnson_%26_Johnson_logo.svg.png' },
+  { name: "Johnson's Baby", slug: 'johnsons-baby', color: '#f3a3b2', logo: '/logos/Johnsons-Baby-Logo.jpg', fallback: 'https://logo.clearbit.com/johnsonsbaby.com' },
+  { name: 'Nestlé', slug: 'nestle', color: '#1f579c', logo: '/logos/nestle_india_logo.jpg', fallback: 'https://upload.wikimedia.org/wikipedia/commons/5/50/Nestl%C3%A9_textlogo.svg' },
   { name: 'Reckitt', slug: 'reckitt', color: '#cc0000', logo: 'https://logo.clearbit.com/reckitt.com', fallback: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Reckitt_logo.svg/300px-Reckitt_logo.svg.png' },
   { name: 'Merck', slug: 'merck', color: '#009999', logo: 'https://logo.clearbit.com/merck.com', fallback: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Merck_%26_Co.svg/300px-Merck_%26_Co.svg.png' },
   { name: 'AstraZeneca', slug: 'astrazeneca', color: '#830051', logo: 'https://logo.clearbit.com/astrazeneca.com', fallback: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/AstraZeneca_logo.svg/300px-AstraZeneca_logo.svg.png' },
@@ -77,7 +79,9 @@ const BrandCard = ({ company, index }) => {
     company.logo,
     company.fallback,
     `/logos/${company.slug}.png`,
-    `/logos/${company.slug}.svg`
+    `/logos/${company.slug}.svg`,
+    `/logos/${company.slug}.jpg`,
+    `/logos/${company.slug}.jpeg`
   ].filter(Boolean);
 
   const [srcIndex, setSrcIndex] = useState(0);

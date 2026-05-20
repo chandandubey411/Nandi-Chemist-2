@@ -1,12 +1,12 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Navy Blue Cross Base -->
-  <path d="M104 24 H152 V232 H104 Z" fill="#00477b"/>
-  <path d="M24 104 H152 V152 H24 Z" fill="#00477b"/>
+  <!-- Red Cross Base -->
+  <path d="M104 24 H152 V232 H104 Z" fill="#dc2626"/>
+  <path d="M24 104 H152 V152 H24 Z" fill="#dc2626"/>
   
-  <!-- Orange Cross Right Arm -->
-  <path d="M152 104 H232 V152 H152 Z" fill="#e87019"/>
-  <!-- Slight curve on the orange arm to match the original -->
-  <path d="M152 104 Q 140 128 152 152" fill="#e87019"/>
+  <!-- Green Cross Right Arm -->
+  <path d="M152 104 H232 V152 H152 Z" fill="#16a34a"/>
+  <!-- Slight curve on the green arm to match the original -->
+  <path d="M152 104 Q 140 128 152 152" fill="#16a34a"/>
   <path d="M152 104 Q 140 128 152 152 Z" fill="white"/>
 
   <!-- White Negative Space (Head) -->

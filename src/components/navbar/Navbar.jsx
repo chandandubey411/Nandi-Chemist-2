@@ -34,9 +34,9 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 shrink-0">
             <img src="/logo.svg" alt="Nandi Chemists Logo" className="h-10 w-auto object-contain" />
-            <div className="sm:flex">
-              <span className="font-outfit font-bold text-[16px] text-primary-600 leading-tight tracking-wide">NANDI</span>
-              <span className="font-outfit font-bold text-[16px] text-primary-800 leading-tight tracking-wide">CHEMISTS</span>
+            <div className="flex gap-1.5">
+              <span className="font-outfit font-bold text-[16px] text-red-600 leading-tight tracking-wide">NANDI</span>
+              <span className="font-outfit font-bold text-[16px] text-green-600 leading-tight tracking-wide">CHEMISTS</span>
             </div>
           </Link>
 
