@@ -93,7 +93,7 @@ const About = () => {
                 name: "Sector-75 (Dasnac Jewel)",
                 tag: "Main Branch",
                 address: "DASNAC The Jewel Of Noida, Sector-75 Noida-201301",
-                image: "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=600&h=400&fit=crop&q=80",
+                image: "/locations/dasnac-sector-75.jpg",
                 phone: "+91 8586850840",
                 mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Dasnac+Jewel+Sector-75+Noida"
               },
@@ -116,24 +116,24 @@ const About = () => {
               {
                 name: "Sector-137 (Gulshan Vivante)",
                 tag: "Gulshan Vivante Store",
-                address: "Shop No. 107, Gulshan Vivante Sector - 137 Gautam Budh Nagar - Noida (U.P), Pin Code - 201301",
-                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop&q=80",
+                address: "Shop No. 107, Gulshan Vivante, Sector-137, Gautam Budh Nagar, Noida (U.P.) – 201301",
+                image: "/locations/gulshan-vivante.jpg",
                 phone: "+91 8586850840",
                 mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Gulshan+Vivante+Sector-137+Noida"
               },
               {
                 name: "Sector-30 (Kirtimaan Plaza)",
                 tag: "Kirtimaan Plaza Store",
-                address: "Shop No. 2, Plot No. E-E-16_B_02, First Floor, kirtimaan Plaze Sector-30, Noida (U.P), Pin Code - 201301",
-                image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=400&fit=crop&q=80",
+                address: "Shop No. 2, Plot No. E-E16_B_02, First Floor, Kirtimaan Plaza, Sector-30, Noida (U.P.) – 201301",
+                image: "/locations/kirtimaan-plaza.png",
                 phone: "+91 8586850840",
                 mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Kirtimaan+Plaza+Sector-30+Noida"
               },
               {
                 name: "Sector-93B (Grand Omaxe)",
                 tag: "Grand Omaxe Store",
-                address: "Shop No. 12, Grand Omaxe Opp Panchsheel Balak Inter Collage Sec-93B, Gautam Budh Nagar (U.P) Pin Code - 201304",
-                image: "https://images.unsplash.com/photo-1607619056574-7b8f304b3c8f?w=600&h=400&fit=crop&q=80",
+                address: "Shop No. 12, Grand Omaxe Opp Panchsheel Balak Inter College, Sector-93B, Gautam Budh Nagar (U.P.) – 201304",
+                image: "/locations/grand-omaxe.jpg",
                 phone: "+91 8586850840",
                 mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Grand+Omaxe+Sector-93B+Noida"
               }
