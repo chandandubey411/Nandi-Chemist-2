@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import SectionTitle from '../components/common/SectionTitle';
 import { FiShield, FiTruck, FiUsers, FiAward, FiHeart, FiGlobe, FiMapPin, FiPhone, FiExternalLink } from 'react-icons/fi';
@@ -16,6 +17,16 @@ const values = [
 ];
 
 const About = () => {
+  useEffect(() => {
+    // Scroll to #locations if hash is present
+    if (window.location.hash === '#locations') {
+      setTimeout(() => {
+        const el = document.getElementById('locations');
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 200);
+    }
+  }, []);
+
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen pt-28 pb-16">
       {/* Hero */}
@@ -84,7 +95,7 @@ const About = () => {
       </section>
 
       {/* Locations */}
-      <section className="section-padding bg-gray-50/50">
+      <section id="locations" className="section-padding bg-gray-50/50 scroll-mt-24">
         <div className="container-max">
           <SectionTitle subtitle="Our Locations" title="Visit Us Today" />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
