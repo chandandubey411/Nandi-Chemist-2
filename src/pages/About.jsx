@@ -103,50 +103,58 @@ const About = () => {
               {
                 name: "Sector-75 (Dasnac Jewel)",
                 tag: "Main Branch",
-                address: "DASNAC The Jewel Of Noida, Sector-75 Noida-201301",
+                address: "GF Shop No. 06, GH-14, Eco City Dasnac, Sector-75, Noida, Gautam Buddh Nagar (U.P.) - 201301",
                 image: "/locations/dasnac-sector-75.jpg",
-                phone: "+91 8586850840",
+                phone: "+91 8586850840, +91 8586850187",
                 mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Dasnac+Jewel+Sector-75+Noida"
               },
               {
                 name: "Sector-120 (Prateek Laurel)",
                 tag: "Prateek Laurel Store",
-                address: "Shop No. 11 & 20, Plot No - GH - 1 Prateek Laurel, Sector - 120 Gautam Budh Nagar - Noida (U.P), Pin Code - 201301",
+                address: "Shop No. 11 & 20, Plot No. - GH-1, Prateek Laurel, Sector-120, Gautam Budh Nagar - Noida (U.P.), Pin Code - 201301",
                 image: "/locations/prateek-laurel.jpg",
-                phone: "+91 8586850840",
+                phone: "0120-4566499, +91 8766256493, +91 9873017451",
                 mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Prateek+Laurel+Sector-120+Noida"
               },
               {
-                name: "Sector-110 (Lotus Panache)",
-                tag: "Lotus Panache Store",
-                address: "Shop No. 11A, Lotus Panache Arcade Sector-110 Gautam Budh Nagar - Noida (U.P), Pin Code - 201301",
-                image: "/locations/lotus-panache.png",
-                phone: "+91 8586850840",
+                name: "Sector-110 (Lotus Arcade)",
+                tag: "Lotus Arcade Store",
+                address: "Shop No. 12A, Lotus Arcade, Sector-110, Noida, Gautam Buddh Nagar (U.P.) - 201301",
+                image: "/locations/lotus-arcade.jpg",
+                phone: "+91 8595293455, +91 8595358138, +91 8287571774",
                 mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Lotus+Panache+Arcade+Sector-110+Noida"
               },
               {
                 name: "Sector-137 (Gulshan Vivante)",
                 tag: "Gulshan Vivante Store",
-                address: "Shop No. 107, Gulshan Vivante, Sector-137, Gautam Budh Nagar, Noida (U.P.) – 201301",
+                address: "Shop No. 107, Gulshan Vivante, Sector-137, Gautam Budh Nagar - Noida (U.P.), Pin Code - 201301",
                 image: "/locations/gulshan-vivante.jpg",
-                phone: "+91 8586850840",
+                phone: "0120-4994952, +91 9643563902, +91 9643563903",
                 mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Gulshan+Vivante+Sector-137+Noida"
               },
               {
                 name: "Sector-30 (Kirtimaan Plaza)",
                 tag: "Kirtimaan Plaza Store",
-                address: "Shop No. 2, Plot No. E-E16_B_02, First Floor, Kirtimaan Plaza, Sector-30, Noida (U.P.) – 201301",
-                image: "/locations/kirtimaan-plaza.png",
-                phone: "+91 8586850840",
+                address: "Shop No. 02, Plot No. E-16-B-02, First Floor, Kirtimaan Plaza, Sector-30, Noida (U.P.) - 201301",
+                image: "/locations/kirtimaan-plaza.jpg",
+                phone: "+91 9911570399",
                 mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Kirtimaan+Plaza+Sector-30+Noida"
               },
               {
                 name: "Sector-93B (Grand Omaxe)",
                 tag: "Grand Omaxe Store",
-                address: "Shop No. 12, Grand Omaxe Opp Panchsheel Balak Inter College, Sector-93B, Gautam Budh Nagar (U.P.) – 201304",
+                address: "Shop No. 12, Omaxe Grand, Opp. Panchsheel Balak Inter College, Sector-93B, Noida, Gautam Buddh Nagar (U.P.) - 201304",
                 image: "/locations/grand-omaxe.jpg",
-                phone: "+91 8586850840",
+                phone: "+91 9311766712, +91 9311766715",
                 mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Grand+Omaxe+Sector-93B+Noida"
+              },
+              {
+                name: "Sector-40 (F-64 C)",
+                tag: "Sector-40 Store",
+                address: "F-64 C, Shop No. 4, Sector-40, Noida (U.P.) - 201301",
+                image: "/locations/sector-40.png",
+                phone: "+91 9871200232, +91 9871200237",
+                mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Sector-40+Noida"
               }
             ].map((loc, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
@@ -171,7 +179,7 @@ const About = () => {
                     <a href={loc.mapUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-xs font-semibold text-primary-600 hover:text-primary-700 transition-colors">
                       <FiExternalLink size={14} /> Get Directions
                     </a>
-                    <a href={`tel:${loc.phone.replace(/\s+/g, '')}`} className="flex items-center gap-1.5 text-xs font-semibold text-gray-500 hover:text-dark transition-colors">
+                    <a href={`tel:${loc.phone.split(',')[0].trim().replace(/\s+/g, '')}`} className="flex items-center gap-1.5 text-xs font-semibold text-gray-500 hover:text-dark transition-colors">
                       <FiPhone size={14} /> Call Store
                     </a>
                   </div>

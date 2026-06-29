@@ -6,25 +6,25 @@ const primaryLocations = [
   {
     name: "Sector-75 (Dasnac Jewel)",
     tag: "Main Branch",
-    address: "DASNAC The Jewel Of Noida, Sector-75 Noida-201301",
+    address: "GF Shop No. 06, GH-14, Eco City Dasnac, Sector-75, Noida, Gautam Buddh Nagar (U.P.) - 201301",
     image: "/locations/dasnac-sector-75.jpg",
-    phone: "+91 8586850840",
+    phone: "+91 8586850840, +91 8586850187",
     mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Dasnac+Jewel+Sector-75+Noida"
   },
   {
     name: "Sector-120 (Prateek Laurel)",
     tag: "Prateek Laurel Store",
-    address: "Shop No. 11 & 20, Plot No - GH - 1 Prateek Laurel, Sector - 120 Gautam Budh Nagar - Noida (U.P), Pin Code - 201301",
+    address: "Shop No. 11 & 20, Plot No. - GH-1, Prateek Laurel, Sector-120, Gautam Budh Nagar - Noida (U.P.), Pin Code - 201301",
     image: "/locations/prateek-laurel.jpg",
-    phone: "+91 8586850840",
+    phone: "0120-4566499, +91 8766256493, +91 9873017451",
     mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Prateek+Laurel+Sector-120+Noida"
   },
   {
-    name: "Sector-110 (Lotus Panache)",
-    tag: "Lotus Panache Store",
-    address: "Shop No. 11A, Lotus Panache Arcade Sector-110 Gautam Budh Nagar - Noida (U.P), Pin Code - 201301",
-    image: "/locations/lotus-panache.png",
-    phone: "+91 8586850840",
+    name: "Sector-110 (Lotus Arcade)",
+    tag: "Lotus Arcade Store",
+    address: "Shop No. 12A, Lotus Arcade, Sector-110, Noida, Gautam Buddh Nagar (U.P.) - 201301",
+    image: "/locations/lotus-arcade.jpg",
+    phone: "+91 8595293455, +91 8595358138, +91 8287571774",
     mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Lotus+Panache+Arcade+Sector-110+Noida"
   }
 ];
@@ -114,7 +114,7 @@ const HomeLocations = () => {
                     <FiExternalLink size={14} /> Get Directions
                   </a>
                   <a
-                    href={`tel:${loc.phone.replace(/\s+/g, '')}`}
+                    href={`tel:${loc.phone.split(',')[0].trim().replace(/\s+/g, '')}`}
                     className="flex items-center gap-1.5 text-xs font-semibold text-gray-500 hover:text-dark transition-colors"
                   >
                     <FiPhone size={14} /> Call Store
