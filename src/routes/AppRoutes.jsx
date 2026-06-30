@@ -9,6 +9,7 @@ const Cart = lazy(() => import('../pages/Cart'));
 const Checkout = lazy(() => import('../pages/Checkout'));
 const About = lazy(() => import('../pages/About'));
 const Contact = lazy(() => import('../pages/Contact'));
+const Outlet = lazy(() => import('../pages/Outlet'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 
 const AppRoutes = () => {
@@ -22,6 +23,8 @@ const AppRoutes = () => {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/outlet" element={<Outlet />} />
+        <Route path="/outlets" element={<Outlet />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>

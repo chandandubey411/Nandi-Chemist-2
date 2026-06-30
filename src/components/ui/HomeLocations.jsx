@@ -59,7 +59,7 @@ const HomeLocations = () => {
             className="mt-6 md:mt-0 shrink-0"
           >
             <Link
-              to="/about#locations"
+              to="/outlet"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white font-semibold text-sm px-6 py-3 rounded-2xl shadow-md shadow-red-100 hover:shadow-lg transition-all duration-300 group"
             >
               See All Locations
@@ -97,9 +97,13 @@ const HomeLocations = () => {
                   <h3 className="font-outfit font-bold text-dark text-base mb-2 group-hover:text-green-700 transition-colors">
                     {loc.name}
                   </h3>
-                  <div className="flex items-start gap-2.5 mb-4 text-xs text-gray-400">
+                  <div className="flex items-start gap-2.5 mb-3 text-xs text-gray-400">
                     <FiMapPin size={16} className="text-red-500 shrink-0 mt-0.5" />
                     <p className="leading-relaxed">{loc.address}</p>
+                  </div>
+                  <div className="flex items-center gap-2.5 mb-4 text-xs text-gray-400">
+                    <FiPhone size={14} className="text-green-600 shrink-0" />
+                    <p>{loc.phone}</p>
                   </div>
                 </div>
 

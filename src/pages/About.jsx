@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import SectionTitle from '../components/common/SectionTitle';
-import { FiShield, FiTruck, FiUsers, FiAward, FiHeart, FiGlobe, FiMapPin, FiPhone, FiExternalLink } from 'react-icons/fi';
+import { FiShield, FiTruck, FiUsers, FiAward, FiHeart, FiGlobe } from 'react-icons/fi';
 
 const stats = [
   { icon: <FiShield size={28} />, value: '100%', label: 'Authentic Products', color: 'bg-blue-100 text-blue-600' },
@@ -16,17 +16,54 @@ const values = [
   { icon: <FiGlobe size={24} />, title: 'Accessible Healthcare', desc: 'Making quality healthcare accessible and affordable for everyone in India.' },
 ];
 
-const About = () => {
-  useEffect(() => {
-    // Scroll to #locations if hash is present
-    if (window.location.hash === '#locations') {
-      setTimeout(() => {
-        const el = document.getElementById('locations');
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 200);
-    }
-  }, []);
+const faqs = [
+  {
+    q: "Are all your medicines authentic?",
+    a: "Yes, 100%. We source all our medicines and healthcare products directly from licensed pharmaceutical companies and authorized distributors. Every product undergoes strict quality checks."
+  },
+  {
+    q: "Do you offer home delivery?",
+    a: "Yes! We offer free home delivery within a 3km radius of any of our stores for orders above ₹300. For Sector-75, we also offer 15-minute express delivery."
+  },
+  {
+    q: "Do I need a prescription to order?",
+    a: "For prescription-only medicines (Schedule H/H1/X), a valid prescription from a registered medical practitioner is mandatory by law. You can upload it on our website or share it via WhatsApp."
+  },
+  {
+    q: "Are you an MRP shop?",
+    a: "No, we are NOT an MRP shop! We believe in making healthcare affordable, which is why we offer flat discounts on a wide range of medicines and wellness products."
+  },
+  {
+    q: "What are your store timings?",
+    a: "Most of our outlets are open from 8:00 AM to 11:00 PM, 7 days a week. For specific branch timings, please contact the respective store directly."
+  },
+  {
+    q: "How can I place an order?",
+    a: "You can easily place an order by uploading your prescription on our website, ordering through our shop page, or simply sending a photo of your prescription/order list to our WhatsApp number (+91 8586850840)."
+  }
+];
 
+const FAQItem = ({ q, a }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div className="bg-gray-50 rounded-2xl p-6 transition-all duration-300 border border-gray-100 hover:border-primary-100 hover:bg-white hover:shadow-card">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex justify-between items-center w-full text-left font-outfit font-bold text-gray-800 hover:text-primary-600 transition-colors"
+      >
+        <span className="text-base sm:text-lg">{q}</span>
+        <span className="text-primary-500 font-bold text-xl ml-4">{isOpen ? '−' : '+'}</span>
+      </button>
+      {isOpen && (
+        <p className="text-sm text-gray-500 mt-3 leading-relaxed font-sans border-t border-gray-100/50 pt-3">
+          {a}
+        </p>
+      )}
+    </div>
+  );
+};
+
+const About = () => {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen pt-28 pb-16">
       {/* Hero */}
@@ -94,97 +131,13 @@ const About = () => {
         </div>
       </section>
 
-      {/* Locations */}
-      <section id="locations" className="section-padding bg-gray-50/50 scroll-mt-24">
-        <div className="container-max">
-          <SectionTitle subtitle="Our Locations" title="Visit Us Today" />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                name: "Sector-75 (Dasnac Jewel)",
-                tag: "Main Branch",
-                address: "GF Shop No. 06, GH-14, Eco City Dasnac, Sector-75, Noida, Gautam Buddh Nagar (U.P.) - 201301",
-                image: "/locations/dasnac-sector-75.jpg",
-                phone: "+91 8586850840, +91 8586850187",
-                mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Dasnac+Jewel+Sector-75+Noida"
-              },
-              {
-                name: "Sector-120 (Prateek Laurel)",
-                tag: "Prateek Laurel Store",
-                address: "Shop No. 11 & 20, Plot No. - GH-1, Prateek Laurel, Sector-120, Gautam Budh Nagar - Noida (U.P.), Pin Code - 201301",
-                image: "/locations/prateek-laurel.jpg",
-                phone: "0120-4566499, +91 8766256493, +91 9873017451",
-                mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Prateek+Laurel+Sector-120+Noida"
-              },
-              {
-                name: "Sector-110 (Lotus Arcade)",
-                tag: "Lotus Arcade Store",
-                address: "Shop No. 12A, Lotus Arcade, Sector-110, Noida, Gautam Buddh Nagar (U.P.) - 201301",
-                image: "/locations/lotus-arcade.jpg",
-                phone: "+91 8595293455, +91 8595358138, +91 8287571774",
-                mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Lotus+Panache+Arcade+Sector-110+Noida"
-              },
-              {
-                name: "Sector-137 (Gulshan Vivante)",
-                tag: "Gulshan Vivante Store",
-                address: "Shop No. 107, Gulshan Vivante, Sector-137, Gautam Budh Nagar - Noida (U.P.), Pin Code - 201301",
-                image: "/locations/gulshan-vivante.jpg",
-                phone: "0120-4994952, +91 9643563902, +91 9643563903",
-                mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Gulshan+Vivante+Sector-137+Noida"
-              },
-              {
-                name: "Sector-30 (Kirtimaan Plaza)",
-                tag: "Kirtimaan Plaza Store",
-                address: "Shop No. 02, Plot No. E-16-B-02, First Floor, Kirtimaan Plaza, Sector-30, Noida (U.P.) - 201301",
-                image: "/locations/kirtimaan-plaza.jpg",
-                phone: "+91 9911570399",
-                mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Kirtimaan+Plaza+Sector-30+Noida"
-              },
-              {
-                name: "Sector-93B (Grand Omaxe)",
-                tag: "Grand Omaxe Store",
-                address: "Shop No. 12, Omaxe Grand, Opp. Panchsheel Balak Inter College, Sector-93B, Noida, Gautam Buddh Nagar (U.P.) - 201304",
-                image: "/locations/grand-omaxe.jpg",
-                phone: "+91 9311766712, +91 9311766715",
-                mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Grand+Omaxe+Sector-93B+Noida"
-              },
-              {
-                name: "Sector-40 (F-64 C)",
-                tag: "Sector-40 Store",
-                address: "F-64 C, Shop No. 4, Sector-40, Noida (U.P.) - 201301",
-                image: "/locations/sector-40.png",
-                phone: "+91 9871200232, +91 9871200237",
-                mapUrl: "https://maps.google.com/?q=Nandi+Chemists+Sector-40+Noida"
-              }
-            ].map((loc, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                className="relative overflow-hidden group rounded-3xl bg-white shadow-card border border-gray-100 hover:shadow-xl hover:border-primary-200 transition-all duration-300 flex flex-col">
-                <div className="relative aspect-video w-full overflow-hidden bg-gray-100">
-                  <img src={loc.image} alt={loc.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm shadow-sm rounded-full px-3 py-1 text-[10px] font-bold text-primary-700 tracking-wide uppercase border border-white/50">
-                    {loc.tag}
-                  </div>
-                </div>
-                <div className="p-5 flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3 className="font-outfit font-bold text-dark text-base mb-2 group-hover:text-primary-600 transition-colors">
-                      {loc.name}
-                    </h3>
-                    <div className="flex items-start gap-2.5 mb-4 text-xs text-gray-400">
-                      <FiMapPin size={16} className="text-primary-500 shrink-0 mt-0.5" />
-                      <p className="leading-relaxed">{loc.address}</p>
-                    </div>
-                  </div>
-                  <div className="border-t border-gray-50 pt-4 flex items-center justify-between gap-3 mt-auto">
-                    <a href={loc.mapUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-xs font-semibold text-primary-600 hover:text-primary-700 transition-colors">
-                      <FiExternalLink size={14} /> Get Directions
-                    </a>
-                    <a href={`tel:${loc.phone.split(',')[0].trim().replace(/\s+/g, '')}`} className="flex items-center gap-1.5 text-xs font-semibold text-gray-500 hover:text-dark transition-colors">
-                      <FiPhone size={14} /> Call Store
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
+      {/* FAQs */}
+      <section className="section-padding bg-gray-50/50">
+        <div className="container-max px-4">
+          <SectionTitle subtitle="Frequently Asked Questions" title="Got Questions? We Have Answers" />
+          <div className="max-w-3xl mx-auto grid gap-4 mt-8">
+            {faqs.map((faq, i) => (
+              <FAQItem key={i} q={faq.q} a={faq.a} />
             ))}
           </div>
         </div>
