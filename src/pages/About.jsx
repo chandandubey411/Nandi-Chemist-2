@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import SectionTitle from '../components/common/SectionTitle';
 import { FiShield, FiTruck, FiUsers, FiAward, FiHeart, FiGlobe } from 'react-icons/fi';
 
@@ -65,15 +64,15 @@ const FAQItem = ({ q, a }) => {
 
 const About = () => {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen pt-28 pb-16">
+    <div className="min-h-screen pt-28 pb-16">
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary-50 to-cyan-50 section-padding">
         <div className="container-max text-center">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
+          <div>
             <span className="text-primary-500 font-semibold text-sm uppercase tracking-wider">About Us</span>
             <h1 className="text-4xl md:text-5xl font-outfit font-bold text-dark mt-2 mb-4">Trusted Name <span className="gradient-text">Experienced People</span></h1>
             <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed">Since 1954, we have been on a mission to make healthcare accessible, affordable, and reliable. From genuine medicines to wellness products, NandiChemist is your one-stop health partner. We are NOT a MRP shop!</p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -82,12 +81,12 @@ const About = () => {
         <div className="container-max">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+              <div key={i}
                 className="text-center p-6 rounded-3xl bg-gray-50 hover:bg-white hover:shadow-card transition-all">
                 <div className={`w-14 h-14 rounded-2xl ${stat.color} flex items-center justify-center mx-auto mb-3`}>{stat.icon}</div>
                 <p className="text-2xl font-outfit font-bold text-dark">{stat.value}</p>
                 <p className="text-sm text-gray-400 mt-1">{stat.label}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -97,19 +96,18 @@ const About = () => {
       <section className="section-padding bg-gray-50/50">
         <div className="container-max">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <div>
               <SectionTitle subtitle="Our Story" title="Built with Care, Delivered with Love" align="left" />
               <p className="text-gray-500 leading-relaxed mb-4">Founded in 1954, NandiChemist started with a simple vision — to ensure that no one has to worry about finding genuine medicines at fair prices.</p>
               <p className="text-gray-500 leading-relaxed">Today, we serve thousands of customers across Noida with 15-minute express delivery in Sector-75, 24/7 customer support, and the widest range of pharmaceutical products available.</p>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-              className="relative">
+            </div>
+            <div className="relative">
               <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop&auto=format" alt="Our Story" className="rounded-3xl shadow-lg w-full" />
               <div className="absolute -bottom-6 -left-6 bg-gradient-to-r from-primary-500 to-cyan-500 text-white rounded-2xl p-4 shadow-glow">
                 <p className="text-2xl font-outfit font-bold">70+</p>
                 <p className="text-xs">Years of Trust</p>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -120,12 +118,12 @@ const About = () => {
           <SectionTitle subtitle="Our Values" title="What We Stand For" />
           <div className="grid md:grid-cols-3 gap-6">
             {values.map((v, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+              <div key={i}
                 className="text-center p-8 rounded-3xl bg-gray-50 hover:bg-white hover:shadow-card transition-all">
                 <div className="w-14 h-14 rounded-2xl bg-primary-100 text-primary-600 flex items-center justify-center mx-auto mb-4">{v.icon}</div>
                 <h3 className="font-outfit font-bold text-dark mb-2">{v.title}</h3>
                 <p className="text-sm text-gray-400 leading-relaxed">{v.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -142,7 +140,7 @@ const About = () => {
           </div>
         </div>
       </section>
-    </motion.div>
+    </div>
   );
 };
 
