@@ -35,7 +35,7 @@ const HomeLocations = () => {
       <div className="container-max px-4">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -50,9 +50,9 @@ const HomeLocations = () => {
             <p className="text-gray-500 text-sm leading-relaxed">
               Serving you across multiple convenient locations in Noida with authentic medicines, healthcare devices, and expert care.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -65,7 +65,7 @@ const HomeLocations = () => {
               See All Locations
               <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Link>
-          </motion.div>
+          </div>
         </div>
 
         {/* Locations Grid */}
