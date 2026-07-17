@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     q: "How can I place an order?",
-    a: "You can easily place an order by uploading your prescription on our website, ordering through our shop page, or simply sending a photo of your prescription/order list to our WhatsApp number (+91 8586850840)."
+    a: "You can easily place an order by uploading your prescription on our website, ordering through our shop page, or simply sending a photo of your prescription/order list to our WhatsApp number (+91 98712 00232)."
   }
 ];
 

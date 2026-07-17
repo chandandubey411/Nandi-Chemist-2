@@ -72,9 +72,6 @@ const Footer = () => {
               <a href="tel:+919871200232" className="flex items-center gap-3 text-gray-400 text-sm hover:text-cyan-400 transition-colors">
                 <FiPhone size={16} /> +91 98712 00232
               </a>
-              <a href="tel:+918586850840" className="flex items-center gap-3 text-gray-400 text-sm hover:text-cyan-400 transition-colors">
-                {/* <FiPhone size={16} /> +91 8586850840 */}
-              </a>
               <a href="mailto:Nandichemists75@gmail.com" className="flex items-center gap-3 text-gray-400 text-sm hover:text-cyan-400 transition-colors">
                 <FiMail size={16} /> Nandichemists75@gmail.com
               </a>

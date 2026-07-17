@@ -51,7 +51,7 @@ const Navbar = () => {
           {/* Right Actions */}
           <div className="flex items-center gap-3">
             <a
-              href="https://wa.me/918586850840?text=Hello%2C%20I%20want%20to%20order%20medicines"
+              href="https://wa.me/919871200232?text=Hello%2C%20I%20want%20to%20order%20medicines"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-xl transition-colors"
@@ -86,7 +86,7 @@ const Navbar = () => {
                   </Link>
                 ))}
                 <div className="pt-4 mt-2 border-t space-y-3">
-                  <a href="https://wa.me/918586850840?text=Hello%2C%20I%20want%20to%20order%20medicines" target="_blank" rel="noopener noreferrer"
+                  <a href="https://wa.me/919871200232?text=Hello%2C%20I%20want%20to%20order%20medicines" target="_blank" rel="noopener noreferrer"
                     className="block w-full text-center bg-green-500 text-white font-semibold py-2.5 rounded-xl text-sm">
                     Order on WhatsApp
                   </a>

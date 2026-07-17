@@ -72,7 +72,7 @@ const HeroSection = () => {
             {/* CTA Buttons */}
             <MotionDiv className="flex flex-wrap gap-4" {...animateY(0.7)}>
               <MotionButton
-                onClick={() => window.open('https://wa.me/918586850840?text=Hello%2C%20I%20want%20to%20order%20medicines', '_blank')}
+                onClick={() => window.open('https://wa.me/919871200232?text=Hello%2C%20I%20want%20to%20order%20medicines', '_blank')}
                 className="btn-primary flex items-center gap-2 text-base" {...hoverTap}>
                 Order on WhatsApp <FiArrowRight />
               </MotionButton>

@@ -18,7 +18,7 @@ const EmergencyDelivery = () => {
               <h2 className="text-3xl md:text-4xl font-outfit font-bold mb-4">24/7 Emergency<br /><span className="text-cyan-400">Medicine Delivery</span></h2>
               <p className="text-gray-400 mb-6 max-w-md">Need urgent medicines? We deliver essential medications round the clock. Just call or order online.</p>
               <div className="flex flex-wrap gap-4">
-                <a href="tel:+918586850840" className="flex items-center gap-2 bg-gradient-to-r from-primary-500 to-cyan-500 px-6 py-3 rounded-2xl font-semibold hover:shadow-glow transition-all">
+                <a href="tel:+919871200232" className="flex items-center gap-2 bg-gradient-to-r from-primary-500 to-cyan-500 px-6 py-3 rounded-2xl font-semibold hover:shadow-glow transition-all">
                   <FiPhone /> Call Now
                 </a>
                 <div className="flex items-center gap-2 text-gray-400 text-sm">
