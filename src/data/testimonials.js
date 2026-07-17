@@ -1,8 +1,8 @@
 export const testimonials = [
-  { id: 1, name: "Priya Sharma", location: "Sector 75", rating: 5, avatar: "https://i.pravatar.cc/100?img=1", text: "Excellent service! Got my medicines quickly and the staff was very helpful.", date: "2 days ago" },
-  { id: 2, name: "Rahul Verma", location: "Noida", rating: 5, avatar: "https://i.pravatar.cc/100?img=3", text: "Best pharmacy in Sector 75. Always have stock and prices are reasonable.", date: "1 week ago" },
-  { id: 3, name: "Sunita Gupta", location: "Dasnac Jewel", rating: 5, avatar: "https://i.pravatar.cc/100?img=5", text: "Very professional and genuine medicines. Highly recommended for families.", date: "3 days ago" },
-  { id: 4, name: "Amit Kumar", location: "Sector 75", rating: 5, avatar: "https://i.pravatar.cc/100?img=8", text: "Fast delivery and great customer support. My go-to pharmacy now.", date: "5 days ago" }
+  { id: 1, name: "Priya Sharma", location: "Sector 40", rating: 5, avatar: "https://i.pravatar.cc/100?img=1", text: "Excellent service! Got my medicines quickly and the staff was very helpful.", date: "2 days ago" },
+  { id: 2, name: "Rahul Verma", location: "Noida", rating: 5, avatar: "https://i.pravatar.cc/100?img=3", text: "Best pharmacy in Sector 40. Always have stock and prices are reasonable.", date: "1 week ago" },
+  { id: 3, name: "Sunita Gupta", location: "Sector 40", rating: 5, avatar: "https://i.pravatar.cc/100?img=5", text: "Very professional and genuine medicines. Highly recommended for families.", date: "3 days ago" },
+  { id: 4, name: "Amit Kumar", location: "Sector 40", rating: 5, avatar: "https://i.pravatar.cc/100?img=8", text: "Fast delivery and great customer support. My go-to pharmacy now.", date: "5 days ago" }
 ];
 
 export const blogs = [

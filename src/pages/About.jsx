@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     q: "Do you offer home delivery?",
-    a: "Yes! We offer free home delivery within a 3km radius of any of our stores for orders above ₹300. For Sector-75, we also offer 15-minute express delivery."
+    a: "Yes! We offer free home delivery within a 3km radius of any of our stores for orders above ₹300. For Sector-40, we also offer 15-minute express delivery."
   },
   {
     q: "Do I need a prescription to order?",
@@ -99,7 +99,7 @@ const About = () => {
             <div>
               <SectionTitle subtitle="Our Story" title="Built with Care, Delivered with Love" align="left" />
               <p className="text-gray-500 leading-relaxed mb-4">Founded in 1954, NandiChemist started with a simple vision — to ensure that no one has to worry about finding genuine medicines at fair prices.</p>
-              <p className="text-gray-500 leading-relaxed">Today, we serve thousands of customers across Noida with 15-minute express delivery in Sector-75, 24/7 customer support, and the widest range of pharmaceutical products available.</p>
+              <p className="text-gray-500 leading-relaxed">Today, we serve thousands of customers across Noida with 15-minute express delivery in Sector-40, 24/7 customer support, and the widest range of pharmaceutical products available.</p>
             </div>
             <div className="relative">
               <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop&auto=format" alt="Our Story" className="rounded-3xl shadow-lg w-full" />

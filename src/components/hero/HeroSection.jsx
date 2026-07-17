@@ -48,7 +48,7 @@ const HeroSection = () => {
           <MotionDiv {...animateX}>
             <MotionDiv className="inline-flex flex-wrap items-center gap-x-2 gap-y-1.5 bg-white/85 backdrop-blur-sm rounded-[1.25rem] sm:rounded-full px-4 py-2 mb-6 shadow-sm border border-white/60 max-w-full" {...animateY(0.2)}>
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse flex-shrink-0" />
-              <span className="text-xs font-bold text-primary-700">15 Min Express Delivery in Sector-75</span>
+              <span className="text-xs font-bold text-primary-700">15 Min Express Delivery in Sector-40</span>
               <span className="hidden sm:inline text-gray-300">|</span>
               <span className="text-xs font-extrabold text-green-600 tracking-wide uppercase">Free Delivery within 3km</span>
             </MotionDiv>

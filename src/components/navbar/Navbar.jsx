@@ -28,7 +28,7 @@ const Navbar = () => {
           <span className="animate-pulse">🚚</span>
           <span>FREE HOME DELIVERY WITHIN 3KM (Min. Order ₹300)</span>
           <span className="hidden sm:inline text-white/30">|</span>
-          <span className="hidden sm:inline text-[10px] opacity-90 uppercase font-medium">15 Min Express Delivery in Sector-75</span>
+          <span className="hidden sm:inline text-[10px] opacity-90 uppercase font-medium">15 Min Express Delivery in Sector-40</span>
         </div>
 
         <div className={`container-max flex items-center justify-between gap-4 px-4 transition-all duration-300 ${scrolled ? 'py-2' : 'py-3'}`}>
@@ -58,8 +58,8 @@ const Navbar = () => {
             >
               Order on WhatsApp
             </a>
-            <a href="tel:+918586850840" className="hidden md:flex items-center gap-1.5 text-primary-600 font-semibold text-sm hover:text-primary-800 transition-colors">
-              <FiPhone size={15} /> 8586850840
+            <a href="tel:+919871200232" className="hidden md:flex items-center gap-1.5 text-primary-600 font-semibold text-sm hover:text-primary-800 transition-colors">
+              <FiPhone size={15} /> 9871200232
             </a>
             <button onClick={() => setMenuOpen(true)} className="lg:hidden p-2.5 rounded-xl hover:bg-primary-50">
               <FiMenu size={20} className="text-gray-600" />
@@ -90,8 +90,8 @@ const Navbar = () => {
                     className="block w-full text-center bg-green-500 text-white font-semibold py-2.5 rounded-xl text-sm">
                     Order on WhatsApp
                   </a>
-                  <a href="tel:+918586850840" className="block w-full text-center bg-primary-50 text-primary-700 font-semibold py-2.5 rounded-xl text-sm">
-                    Call: 8586850840
+                  <a href="tel:+919871200232" className="block w-full text-center bg-primary-50 text-primary-700 font-semibold py-2.5 rounded-xl text-sm">
+                    Call: 9871200232
                   </a>
                 </div>
               </div>
