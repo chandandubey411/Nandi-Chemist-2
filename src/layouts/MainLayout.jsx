@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/footer/Footer';
 import CartDrawer from '../components/cart/CartDrawer';
+import WhatsAppButton from '../components/common/WhatsAppButton';
 
 
 const MainLayout = () => {
@@ -20,6 +21,7 @@ const MainLayout = () => {
       </main>
       <Footer />
       <CartDrawer />
+      <WhatsAppButton />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
-const WHATSAPP_NUMBER = '919871200232';
+const WHATSAPP_NUMBER = '918586850840';
 
 // slug must match the filename in public/logos/{slug}.png
 const companies = [

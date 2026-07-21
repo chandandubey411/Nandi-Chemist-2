@@ -25,7 +25,7 @@ const Contact = () => {
       `*Subject:* ${form.subject}\n\n` +
       `*Message:*\n${form.message}`;
 
-    const WHATSAPP_NUMBER = '919871200232';
+    const WHATSAPP_NUMBER = '918586850840';
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     
     window.open(whatsappUrl, '_blank');
@@ -38,9 +38,9 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: <FiPhone />, title: 'Phone', value: '+91 9871200232', href: 'tel:+919871200232', color: 'bg-blue-100 text-blue-600' },
+    { icon: <FiPhone />, title: 'Phone', value: '+91 8586850840', href: 'tel:+918586850840', color: 'bg-blue-100 text-blue-600' },
     { icon: <FiMail />, title: 'Email', value: 'Nandichemists75@gmail.com', href: 'mailto:Nandichemists75@gmail.com', color: 'bg-green-100 text-green-600' },
-    { icon: <FiMapPin />, title: 'Address', value: '64, F Block Rd, F Block, Sector 40, Noida, Uttar Pradesh 201303', href: 'https://maps.google.com/?q=64,+F+Block+Rd,+F+Block,+Sector+40,+Noida,+Uttar+Pradesh+201303', color: 'bg-purple-100 text-purple-600' },
+    { icon: <FiMapPin />, title: 'Address', value: 'Shop no 6, Ground Floor, Dasnac Jewel of Noida, Sector 75, Noida, UP 201316', href: 'https://maps.google.com/?q=Shop+no+6,+Ground+Floor,+Dasnac+Jewel+of+Noida,+Sector+75,+Noida,+UP+201316', color: 'bg-purple-100 text-purple-600' },
     { icon: <FiClock />, title: 'Hours', value: '10:00 AM - 10:00 PM', href: '#', color: 'bg-amber-100 text-amber-600' },
   ];
 

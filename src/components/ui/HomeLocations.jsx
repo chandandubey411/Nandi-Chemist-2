@@ -4,12 +4,12 @@ import { FiMapPin, FiPhone, FiExternalLink, FiArrowRight } from 'react-icons/fi'
 
 const primaryLocations = [
   {
-    name: "Sector-40",
+    name: "Sector-75 (Dasnac Jewel)",
     tag: "Main Branch",
-    address: "64, F Block Rd, F Block, Sector 40, Noida, Uttar Pradesh 201303",
-    image: "/locations/sector-40.png",
-    phone: "+91 9871200232, +91 9871200237",
-    mapUrl: "https://maps.google.com/?q=64,+F+Block+Rd,+F+Block,+Sector+40,+Noida,+Uttar+Pradesh+201303"
+    address: "Shop no 6, Ground Floor, Dasnac Jewel of Noida, Sector 75, Noida, UP 201316",
+    image: "/locations/dasnac-sector-75.jpg",
+    phone: "+91 8586850840",
+    mapUrl: "https://maps.google.com/?q=Shop+no+6,+Ground+Floor,+Dasnac+Jewel+of+Noida,+Sector+75,+Noida,+UP+201316"
   },
   {
     name: "Sector-120 (Prateek Laurel)",

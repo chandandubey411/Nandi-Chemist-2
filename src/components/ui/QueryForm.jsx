@@ -20,7 +20,7 @@ const QueryForm = () => {
       `*Phone:* ${form.phone}\n\n` +
       `*Message:*\n${form.message}`;
 
-    window.open(`https://wa.me/919871200232?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/918586850840?text=${encodeURIComponent(msg)}`, '_blank');
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);

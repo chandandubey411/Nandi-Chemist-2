@@ -28,7 +28,7 @@ const Navbar = () => {
           <span className="animate-pulse">🚚</span>
           <span>FREE HOME DELIVERY WITHIN 3KM (Min. Order ₹300)</span>
           <span className="hidden sm:inline text-white/30">|</span>
-          <span className="hidden sm:inline text-[10px] opacity-90 uppercase font-medium">15 Min Express Delivery in Sector-40</span>
+          <span className="hidden sm:inline text-[10px] opacity-90 uppercase font-medium">15 Min Express Delivery in Sector-75</span>
         </div>
 
         <div className={`container-max flex items-center justify-between gap-4 px-4 transition-all duration-300 ${scrolled ? 'py-2' : 'py-3'}`}>
@@ -51,15 +51,15 @@ const Navbar = () => {
           {/* Right Actions */}
           <div className="flex items-center gap-3">
             <a
-              href="https://wa.me/919871200232?text=Hello%2C%20I%20want%20to%20order%20medicines"
+              href="https://wa.me/918586850840?text=Hello%2C%20I%20want%20to%20order%20medicines"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-xl transition-colors"
             >
               Order on WhatsApp
             </a>
-            <a href="tel:+919871200232" className="hidden md:flex items-center gap-1.5 text-primary-600 font-semibold text-sm hover:text-primary-800 transition-colors">
-              <FiPhone size={15} /> 9871200232
+            <a href="tel:+918586850840" className="hidden md:flex items-center gap-1.5 text-primary-600 font-semibold text-sm hover:text-primary-800 transition-colors">
+              <FiPhone size={15} /> 8586850840
             </a>
             <button onClick={() => setMenuOpen(true)} className="lg:hidden p-2.5 rounded-xl hover:bg-primary-50">
               <FiMenu size={20} className="text-gray-600" />
@@ -86,12 +86,12 @@ const Navbar = () => {
                   </Link>
                 ))}
                 <div className="pt-4 mt-2 border-t space-y-3">
-                  <a href="https://wa.me/919871200232?text=Hello%2C%20I%20want%20to%20order%20medicines" target="_blank" rel="noopener noreferrer"
+                  <a href="https://wa.me/918586850840?text=Hello%2C%20I%20want%20to%20order%20medicines" target="_blank" rel="noopener noreferrer"
                     className="block w-full text-center bg-green-500 text-white font-semibold py-2.5 rounded-xl text-sm">
                     Order on WhatsApp
                   </a>
-                  <a href="tel:+919871200232" className="block w-full text-center bg-primary-50 text-primary-700 font-semibold py-2.5 rounded-xl text-sm">
-                    Call: 9871200232
+                  <a href="tel:+918586850840" className="block w-full text-center bg-primary-50 text-primary-700 font-semibold py-2.5 rounded-xl text-sm">
+                    Call: 8586850840
                   </a>
                 </div>
               </div>

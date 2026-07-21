@@ -6,7 +6,7 @@ import { FiCreditCard, FiSmartphone, FiDollarSign, FiCheck, FiArrowLeft } from '
 import { FaWhatsapp } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
-const WHATSAPP_NUMBER = '919871200232'; // Change to your real WhatsApp number
+const WHATSAPP_NUMBER = '918586850840'; // Change to your real WhatsApp number
 const SHOP_EMAIL = 'support@nandichemist.com'; // Change to your real email
 
 const Checkout = () => {

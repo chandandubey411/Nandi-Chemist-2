@@ -17,7 +17,7 @@ const PrescriptionUpload = () => {
             <h3 className="font-outfit font-bold text-xl text-dark mb-2">Send via WhatsApp</h3>
             <p className="text-sm text-gray-500 mb-6">Click the button below to open WhatsApp and send us a photo of your prescription. We'll handle the rest!</p>
             <button 
-              onClick={() => window.open('https://wa.me/919871200232?text=Hi,%20I%20would%20like%20to%20order%20medicines%20using%20my%20prescription.', '_blank')}
+              onClick={() => window.open('https://wa.me/918586850840?text=Hi,%20I%20would%20like%20to%20order%20medicines%20using%20my%20prescription.', '_blank')}
               className="bg-green-500 hover:bg-green-600 text-white font-semibold rounded-2xl px-8 py-3 transition-colors inline-flex items-center gap-2">
               Open WhatsApp
             </button>
